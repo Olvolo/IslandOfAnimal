@@ -72,13 +72,31 @@ public abstract class Animal {
                     double predatorWeight = getWeight();
                     double preyWeight = prey.getWeight();
                     double maxPredatorWeight = animalMaxWeightMap.getOrDefault(predatorClass, 0.0);
-                    double newPredatorWeight = Math.min(predatorWeight + preyWeight, maxPredatorWeight);
-                    double newPreyWeight = Math.max(preyWeight - (maxPredatorWeight - predatorWeight), 0.0);
-                    setWeight(newPredatorWeight);
-                    prey.setWeight(newPreyWeight);
+                    double weightDifference = maxPredatorWeight - predatorWeight;
+
+                    if (weightDifference <= 0) {
+                        // Хищник уже достиг максимального веса
+                        break;
+                    }
+
+                    double consumedWeight = Math.min(preyWeight, weightDifference);
+                    double newPredatorWeight = predatorWeight + consumedWeight;
+                    double newPreyWeight = Math.max(preyWeight - consumedWeight, 0.0);
+
+                    if (newPredatorWeight > 0) {
+                        setWeight(newPredatorWeight);
+                    } else {
+                        // Хищник достиг отрицательного веса, удаляем его из списка животных
+                        getCurrentCell().getAnimals().remove(this);
+                        break;
+                    }
+
                     if (newPreyWeight <= 0.5 * preyWeight) {
                         getCurrentCell().getAnimals().remove(prey);
+                    } else {
+                        prey.setWeight(newPreyWeight);
                     }
+
                     System.out.println("Животное " + getClass().getSimpleName() + " съело " + prey.getClass().getSimpleName() +
                             " и теперь весит " + getWeight());
                 }
