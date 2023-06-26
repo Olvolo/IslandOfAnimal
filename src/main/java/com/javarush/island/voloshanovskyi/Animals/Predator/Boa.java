@@ -1,16 +1,12 @@
-package com.javarush.island.voloshanovskyi.Animals;
+package com.javarush.island.voloshanovskyi.Animals.Predator;
 
-public class Boa extends Predator{
+public class Boa extends Predator {
+    public Boa(double weight) {
+        super(weight);
+    }
+
     @Override
     public boolean equals(Object o) {
         return super.equals(o);
-    }
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    public Boa(double weight) {
-        super(weight);
     }
 }

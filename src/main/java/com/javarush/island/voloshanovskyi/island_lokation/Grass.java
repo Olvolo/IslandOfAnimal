@@ -1,8 +1,7 @@
-package com.javarush.island.voloshanovskyi.Animals;
+package com.javarush.island.voloshanovskyi.island_lokation;
 
 public class Grass {
     private double weight;
-
     public double getWeight() {
         return weight;
     }

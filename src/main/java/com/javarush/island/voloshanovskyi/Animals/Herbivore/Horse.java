@@ -1,16 +1,8 @@
-package com.javarush.island.voloshanovskyi.Animals;
+package com.javarush.island.voloshanovskyi.Animals.Herbivore;
 
-public class Horse extends Herbivore{
+public class Horse extends Herbivore {
     public Horse(double weight) {
         super(weight);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-}
+ }

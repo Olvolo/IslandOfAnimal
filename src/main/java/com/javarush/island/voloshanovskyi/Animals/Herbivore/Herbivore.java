@@ -1,4 +1,6 @@
-package com.javarush.island.voloshanovskyi.Animals;
+package com.javarush.island.voloshanovskyi.Animals.Herbivore;
+
+import com.javarush.island.voloshanovskyi.Animals.Animal;
 
 public class Herbivore extends Animal {
     public Herbivore(double weight) {

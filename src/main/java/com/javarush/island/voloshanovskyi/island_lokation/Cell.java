@@ -1,10 +1,11 @@
-package com.javarush.island.voloshanovskyi.Animals;
+package com.javarush.island.voloshanovskyi.island_lokation;
+
+import com.javarush.island.voloshanovskyi.Animals.Animal;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import static com.javarush.island.voloshanovskyi.Animals.Grass.MAX_QUANTITY_GRASS;
-
+import static com.javarush.island.voloshanovskyi.island_lokation.Grass.MAX_QUANTITY_GRASS;
 
 public class Cell {
     @Override

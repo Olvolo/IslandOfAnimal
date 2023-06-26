@@ -1,6 +1,7 @@
-package com.javarush.island.voloshanovskyi.Animals;
+package com.javarush.island.voloshanovskyi.island_lokation;
 
 public class Island {
+
     private final Cell[][] cells;
     public static final int ISLAND_WIDTH = 20;
     public static final int ISLAND_DEPTH = 100;

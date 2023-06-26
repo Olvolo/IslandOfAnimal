@@ -1,17 +1,8 @@
-package com.javarush.island.voloshanovskyi.Animals;
+package com.javarush.island.voloshanovskyi.Animals.Predator;
 
-public class Eagle extends Predator{
+public class Eagle extends Predator {
     public Eagle(double weight) {
         super(weight);
     }
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
 
 }

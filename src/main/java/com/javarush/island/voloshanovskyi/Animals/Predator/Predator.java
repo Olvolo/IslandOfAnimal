@@ -1,4 +1,6 @@
-package com.javarush.island.voloshanovskyi.Animals;
+package com.javarush.island.voloshanovskyi.Animals.Predator;
+
+import com.javarush.island.voloshanovskyi.Animals.Animal;
 
 public class Predator extends Animal {
     @Override    public boolean equals(Object o) {
